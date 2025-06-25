@@ -1,0 +1,39 @@
+@import "../../styles/_mixins.scss";
+@import "../../styles/_variables.scss";
+
+.airport-details {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 1px solid $color-border-primary;
+  border-radius: 4px;
+  margin-top: 1rem;
+
+  .airport-details-list {
+    li {
+      margin-bottom: 0.75rem;
+      padding: 0.25rem 0;
+      border-bottom: 1px solid $color-border-primary;
+      display: flex;
+      flex-direction: column;
+
+      strong {
+        color: $color-text-primary;
+        font-weight: 600;
+        margin-bottom: 0.15rem;
+      }
+
+      @include md {
+        flex-direction: row;
+        align-items: center;
+        strong {
+          min-width: 120px;
+        }
+      }
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+  }
+}

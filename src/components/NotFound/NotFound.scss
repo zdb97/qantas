@@ -1,0 +1,13 @@
+@import "../../styles/_mixins.scss";
+@import "../../styles/_variables.scss";
+
+.not-found {
+  margin: $spacing-xxl auto 0;
+  text-align: center;
+  border: 1px solid $color-border-primary;
+  padding-bottom: $spacing-xxl;
+
+  @include md {
+    max-width: 700px;
+  }
+}

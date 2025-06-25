@@ -1,0 +1,69 @@
+@import "./variables.scss";
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  line-height: 1.6;
+  color: $color-text-primary;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// h2 {
+//   font-size: 1.5rem;
+//   color: $color-text-primary;
+//   margin-bottom: $spacing-lg;
+//   padding-bottom: $spacing-sm;
+// }
+// h6 {
+//   margin: 0 0 $spacing-lg 0;
+//   font-weight: 600;
+// }
+
+p {
+  margin: 0 0 $spacing-lg 0;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: $color-primary;
+  font-size: 1rem;
+  margin-bottom: $spacing-lg;
+  cursor: pointer;
+  padding: $spacing-sm 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+}
+
+.error-message {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid $color-border-primary;
+  border-radius: $border-radius-md;
+  text-align: center;
+}

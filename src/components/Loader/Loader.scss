@@ -1,0 +1,38 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid $color-border-primary;
+  border-bottom-color: $color-primary;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include md {
+    width: 64px;
+    height: 64px;
+    border-width: 6px;
+  }
+
+  @include lg {
+    width: 80px;
+    height: 80px;
+    border-width: 8px;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
