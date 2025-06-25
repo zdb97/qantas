@@ -64,10 +64,6 @@
     }
   }
 
-  // li {
-  //   margin-bottom: $spacing-sm;
-  // }
-
   .section-header {
     border-left: 4px solid $color-primary;
     padding: $spacing-md $spacing-lg;
@@ -135,10 +131,5 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
-    // @include md {
-    //   margin-top: 0;
-    //   text-align: right;
-    // }
   }
 }
