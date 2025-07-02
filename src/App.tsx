@@ -1,14 +1,14 @@
 import React, { useEffect, useState, lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Loader from "./components/loader/Loader";
+import Loader from "./components/Loader/Loader";
 import { Airport } from "./types/airport";
 import { isValidAirportData, getCachedAirports } from "./utils/AirportUtils";
 import { AIRPORT_API, AIRPORT_CACHE_KEY, AIRPORT_CACHE_TTL } from "./constants/constants";
 import "./styles/global.scss";
 
-const AirportListing = lazy(() => import("./components/airportListing/AirportListing"));
-const AirportDetails = lazy(() => import("./components/airportDetails/AirportDetails"));
-const PageNotFound = lazy(() => import("./components/notFound/NotFound"));
+const AirportListing = lazy(() => import("./components/AirportListing/AirportListing"));
+const AirportDetails = lazy(() => import("./components/AirportDetails/AirportDetails"));
+const PageNotFound = lazy(() => import("./components/NotFound/NotFound"));
 const Search = lazy(() => import("./components/search/Search"));
 
 const App: React.FC = () => {
@@ -87,7 +87,14 @@ const App: React.FC = () => {
             </Suspense>
           }
         />
-        <Route path="search" element={<Search />} />
+        <Route
+          path="search"
+          element={
+            <Suspense fallback={<Loader />}>
+              <Search />
+            </Suspense>
+          }
+        />
         <Route
           path="*"
           element={
