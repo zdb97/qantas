@@ -87,14 +87,7 @@ const App: React.FC = () => {
             </Suspense>
           }
         />
-        <Route
-          path="search"
-          element={
-            <Suspense fallback={<Loader />}>
-              <Search />
-            </Suspense>
-          }
-        />
+        <Route path="search" element={<Search />} />
         <Route
           path="*"
           element={
