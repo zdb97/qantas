@@ -1,0 +1,46 @@
+@import "../../styles/_mixins.scss";
+@import "../../styles/_variables.scss";
+
+.search-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  border-radius: $border-radius-md;
+  border: 1px solid $color-border-primary;
+
+  h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .back-btn {
+    display: inline-block;
+    margin-bottom: 1rem;
+    text-decoration: none;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: $spacing-md $spacing-lg;
+    border-color: $color-border-primary;
+    border-radius: $border-radius-sm;
+    &:focus {
+      border-color: $color-primary;
+      outline: none;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid $color-border-primary;
+      font-size: 1rem;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
